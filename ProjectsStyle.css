@@ -1,0 +1,178 @@
+body {
+    font-family: "Lato";
+    background: #28243c;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+main {
+    margin-left: 5rem;
+}
+.container{
+    max-width: 1300px;
+    width: 100%;
+    margin:auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10px; 
+    position: relative;
+}
+
+.pads{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Page title */ /* Page title */ /* Page title *//* Page title */ /* Page title */ /* Page title *//* Page title */ /* Page title */ /* Page title */
+.project-title h1, .project-instruction h4{
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 8px;
+}
+.project-title h1::before{
+    content:'Projects';
+    display:block;
+    font-size: 16px;
+    color: #ff304f;
+}
+.project-instruction {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+/* Page title */ /* Page title */ /* Page title *//* Page title */ /* Page title */ /* Page title *//* Page title */ /* Page title */ /* Page title */
+
+/* Contents of the project */ /* Contents of the project */ /* Contents of the project */ /* Contents of the project */ /* Contents of the project */
+.filler{
+    border-bottom: 2px solid #ff304f;
+    height: 0.001px;
+}
+.project-icon, .project-instruction img{
+    width: 25px;
+    height: 25px;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7499%) hue-rotate(332deg) brightness(105%) contrast(101%);
+}
+.project-section .project-content {
+    flex: 0 0 100%; 
+    max-width: 100%;
+    margin-bottom: 10rem;
+}
+.project-item {
+    position: relative;
+    display: flex; 
+    border-bottom: 2px solid #ff304f;
+    border-top: 2px solid #ff304f;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center; 
+    transition: margin-bottom 0.3s ease-in-out; 
+}
+
+.project-image{
+    width: 330px;
+    height: 175px;
+}
+.project-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    border: 4px solid #141418;
+}
+
+.project-details p{
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/* Contents of the project */ /* Contents of the project */ /* Contents of the project */ /* Contents of the project */ /* Contents of the project */
+
+/* Drop Down Effect */ /* Drop Down Effect */ /* Drop Down Effect */ /* Drop Down Effect */ /* Drop Down Effect */ /* Drop Down Effect */
+.project-item:hover {
+    margin-bottom: 67px;
+    box-shadow:
+    inset 0px 10px 150px -20px#751870,
+    inset 0px 10px 150px -20px #c00078;
+}
+
+.dropdown-content {
+    text-align: center;
+    position: absolute;
+    top: 101%; 
+    background-color: #141418;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: 100%;
+    max-height: 0;
+    visibility: hidden;
+    transition: max-height 1s ease-in-out,
+                visibility 0.125s ease-out;
+}
+
+.project-item:hover .dropdown-content {
+    max-height: 300px; 
+    visibility:visible;
+}
+
+.dropdown-content h4 a {
+    color: #c00078;
+}
+.dropdown-content h4 a:hover {
+    color: #ffffff;
+}
+/* Drop Down Effect */ /* Drop Down Effect */ /* Drop Down Effect */ /* Drop Down Effect */ /* Drop Down Effect */ /* Drop Down Effect */
+
+/* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */
+@media (max-width: 960px){
+        body{
+            font-size: 14px;
+        }
+        .project-section{
+            overflow:hidden;
+        }
+        .project-item {
+            flex-direction: column; 
+            width: 95%;
+        }
+        .filler{
+            width: 95%;
+        }
+        .project-item:hover {
+            margin-bottom: 3.8rem;
+        }
+        .project-details p{
+            font-size:12px;
+        }
+        .project-item:active .dropdown-content {
+            display: block;
+        }
+        .project-section .project-content {
+            margin-bottom: 12rem;
+        }
+        .project-title{
+            margin-top: 6rem;
+        }
+}
+@media (min-width: 960px){
+        .container{
+            margin-left:8.7rem;
+        }
+        .project-image img{
+            margin-left: 1rem;
+        }
+        .project-item {
+            align-items: flex-start;
+        }
+        .project-image {
+            flex-shrink: 0;
+            margin-top: -0.5rem;
+        }
+        .project-details{
+            flex-grow: 1; 
+            padding-left: 5rem;
+        }
+}
+/* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */

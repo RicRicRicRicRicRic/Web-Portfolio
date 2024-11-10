@@ -1,0 +1,262 @@
+body {
+    font-family: "Lato";
+    background: #28243c;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+main {
+    margin-left: 5rem;
+}
+
+.container{
+    max-width: 1300px;
+    width: 100%;
+    margin:auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: 10px; 
+    position: relative;
+}
+
+.pads{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+/* Page title */ /* Page title */ /* Page title */ /* Page title */ /* Page title */ /* Page title *//* Page title */ /* Page title */
+
+.contact-title h1{
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-top: 8px;
+
+}
+.contact-title h1::before{
+    content:"Let's Connect" ;
+    display:block;
+    font-size: 16px;
+    color: #ff304f;
+}
+/* Page title */ /* Page title */ /* Page title */ /* Page title */ /* Page title */ /* Page title *//* Page title */ /* Page title */
+
+/* Fill out content */ /* Fill out content */ /* Fill out content */ /* Fill out content */ /* Fill out content */ /* Fill out content */
+.contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1260px;
+    height: 100%;
+}
+.info-left{
+    height: 100%;
+    padding: 25px 40px;
+    width: 30%;
+    box-sizing: border-box;
+}
+.info-left h2{
+    color:#ff304f;
+}
+.form-right{
+    height: 100%;
+    padding: 25px 40px;
+    width: 70%;
+    box-sizing: border-box;
+}
+.form-right h2{
+    color: #ff304f;
+    margin-bottom: 100px;
+}
+.contact-box h2{
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.field-name, .field-subject, .field-email, .field-msg{
+    width: 100%; 
+    outline: none; 
+    border: 2.5px solid #00000099;  
+    background-color: #E6EEEE;
+    font-size: 1.1rem; 
+    margin-bottom: 22px; 
+    transition: 0.3s;
+    font-family: 'Roboto';
+    border-radius: 15px;
+}
+.field-name{
+    margin-top: 12px;
+}
+.field-msg {
+    height: 100px;
+    resize: none; 
+    overflow: auto;
+}
+
+/* Fill out content */ /* Fill out content */ /* Fill out content */ /* Fill out content */ /* Fill out content */ /* Fill out content */
+
+/* More information icons */ /* More information icons */ /* More information icons */ /* More information icons */ /* More information icons */
+.info-icons{
+    display:flex;
+    flex-direction: column;
+}
+
+.info-icons img{
+    width: 45px;
+    height: 45px;
+    filter: brightness(0) saturate(100%) invert(35%) sepia(85%) saturate(4137%) hue-rotate(334deg) brightness(105%) contrast(105%);
+    margin-right: 2rem;
+}
+.info-phone{
+    margin-top: 2.5rem;
+}
+.info-location{
+    display: flex;
+    align-items: center; 
+    margin-bottom: 5rem;
+}
+.info-phone, .info-email{ 
+    display: flex;
+    align-items: center; 
+    margin-bottom: 40px;
+}
+.info-icons h4, .info-icons p {
+    margin: 0;
+}
+.form-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+/* More information icons */ /* More information icons */ /* More information icons */ /* More information icons */ /* More information icons */
+
+/* Social Media Links */ /* Social Media Links */ /* Social Media Links */ /* Social Media Links */ /* Social Media Links */
+.social-icons {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    gap: 0.5rem; 
+    background-color: #141418;
+    border-radius: 30px;
+    height: 80px;
+}
+.social-icons img{
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    background-color: transparent;
+    border: 0.2rem solid #ff304f;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin-right: 0.75rem;  
+    margin-left: 0.75rem;
+    transition: 0.3s ease;
+    color:#ff304f;
+    filter: brightness(0) saturate(100%) invert(40%) sepia(93%) saturate(4997%) hue-rotate(334deg) brightness(101%) contrast(101%);
+}
+.social-icons img:hover{
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0  0 25px #751870,
+                0  0 25px #c00078;
+}
+/* Social Media Links */ /* Social Media Links */ /* Social Media Links */ /* Social Media Links */ /* Social Media Links */
+
+/* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ 
+.send-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.send-button button {
+    display: flex;              
+    align-items: center;        
+    height: 60px;
+    gap: 10px;                   
+    padding: 5px 10px;         
+    border: none;               
+    background-color: royalblue;  
+    cursor: pointer;         
+    border-radius: 30px;   
+}
+.send-button img{
+    width: 45px;
+    height: 45px;
+    border-radius: 30px;
+    background-color: white;  
+    transition: transform 0.1s ease; 
+}
+.send-button h2{
+    color: white;
+}
+
+.send-button .clicked img {
+    animation: spin 0.4s linear;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+         transform: rotate(440deg); 
+    }
+}
+/* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ /* Send Button */ 
+
+/* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */
+@media (max-width: 960px){
+    .contact-title{
+        margin-top: 6rem;
+    }
+    .contact-section{
+        overflow: hidden;
+    }
+    .contact-box{
+        width: 100%;
+        display: flex; 
+        flex-direction: column; 
+    }
+    .form-right{
+
+        border-top: 3px solid #ff304f;
+    }
+    .info-left{
+        width: 100%
+    }
+    .field-name, .field-subject, .field-email, .field-msg{
+        width: 100%;
+    }
+    .social-icons{
+        width: 100%;
+    }
+    .info-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .info-icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (min-width: 960px){
+    body{
+        overflow: hidden;
+    }
+    .container{
+        margin-left:8.7rem;
+    }
+    .contact-content{
+        margin-left: 1.8rem;
+    }
+    .info-left{
+        border-right: 3px solid #ff304f;
+    }    
+    .field-name, .field-subject, .field-email, .field-msg{
+        padding: 0.5rem 1rem; 
+    }
+}
+/* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability

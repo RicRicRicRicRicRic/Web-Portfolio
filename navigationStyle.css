@@ -1,0 +1,159 @@
+
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans';
+    --text-primary: #b6b6b6; 
+    --text-secondary: #ececec; 
+    --bg-primary: #23232e;
+    --bg-secondary: #141418;
+}
+
+/* Navigation bar arrow design and rotation effects */ /* Navigation bar arrow design and rotation effects */ /* Navigation bar arrow design and rotation effects */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1rem;
+    background: var(--bg-secondary);
+    width: 70%;
+    padding-left: 1.5rem;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(70%);
+    transition: width 200ms ease, color 200ms ease;
+    margin-top: -1rem;
+}
+
+.nav-logo-icon {
+    transition: 200ms ease;
+    width: 25px; 
+    height: 25px; 
+    margin-top: 1rem;
+    filter: grayscale(100%) opacity(100%) brightness(150%);
+}
+
+.navbar:hover .nav-logo { 
+    width: 85%; 
+}
+
+.navbar:hover .nav-logo-icon { 
+    transform: translateX(80px) rotate(-180deg);
+}
+/* Navigation bar arrow design and rotation effects */ /* Navigation bar arrow design and rotation effects */ /* Navigation bar arrow design and rotation effects */
+
+/* Side Navigation Bar Design and effects */ /* Side Navigation Bar Design and effects */ /* Side Navigation Bar Design and effects */
+.navbar {
+    position: fixed;
+    background-color: #202434;
+    transition: width 200ms ease;
+    z-index: 1000; 
+}
+
+.navbar-nav { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(100%) brightness(135%);
+    padding-left: 1.5rem; 
+    transition: color 200ms ease, background 200ms ease;
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(100%);
+    background: var(--bg-secondary);
+    color: #ff304f;
+}
+
+.nav-icon {
+    width: 30px; 
+    height: 30px; 
+}
+
+.nav-link:hover .nav-icon {
+    filter: brightness(0) saturate(100%) invert(27%) sepia(100%) saturate(3025%) hue-rotate(337deg) brightness(112%) contrast(101%);
+}
+
+
+.link-text {
+    display: none;
+    margin-left: 1rem;
+}
+
+
+/* Side Navigation Bar Design and effects */ /* Side Navigation Bar Design and effects */ /* Side Navigation Bar Design and effects */
+
+/* Scrollbar Design */ /* Scrollbar Design */ /* Scrollbar Design */ /* Scrollbar Design */ /* Scrollbar Design */ /* Scrollbar Design */
+body::-webkit-scrollbar {
+    width: 0.45rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #6649b8;
+    border-radius: 0.25rem; 
+}
+
+/* Scrollbar Design */ /* Scrollbar Design */ /* Scrollbar Design */ /* Scrollbar Design */ /* Scrollbar Design */ /* Scrollbar Design */
+
+/* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */
+
+@media (max-width: 960px) {/* Small devices */ 
+    .navbar {
+        top: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+    .nav-logo {
+        display: none;
+    }
+    .navbar-nav{
+        flex-direction: row;
+    }
+    .nav-link{
+        justify-content: center;
+    }
+    main{
+        margin: 0;
+    }
+}
+
+@media (min-width: 960px) {/* Large devices */ 
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+    .navbar:hover { 
+        width: 10rem; 
+    }
+    .navbar:hover .link-text { 
+        display: inline;
+        transition: opacity 1s ease-in-out;
+    }
+}
+
+/* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */ /* Mobile devices compability */
+
+
+

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='navigationStyle.css'>
+    <link rel='stylesheet' type='text/css' href='HomeStyle.css'>
+    <link rel='stylesheet' type='text/css' href='theme.css'>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Estremadura Portfolio</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-logo">
+                <img src="Image Icons/ArrowRotate.png" class="nav-logo-icon" alt="Website Logo">
+            </li>
+            <!-- Navigation Selection -->
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <img src="Image Icons/Home.png" class="nav-icon" alt="Home Page Icon">
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="About.html" class="nav-link">
+                    <img src="Image Icons/About.png" class="nav-icon" alt="About Page Icon">
+                    <span class="link-text">About</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Projects.html" class="nav-link">
+                    <img src="Image Icons/Projects.png" class="nav-icon" alt="Projects Page Icon">
+                    <span class="link-text">Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Contact.html" class="nav-link">
+                    <img src="Image Icons/Contact.png" class="nav-icon" alt="Contact Page Icon">
+                    <span class="link-text">Contact</span>
+                </a>
+            </li>
+            <!-- Navigation Selection -->
+        </ul>
+    </nav>    
+
+    <script src="Mode.js"></script>
+    <div class="theme">
+        <button class="theme-bttn" onclick="toggleColors()">
+            <img id ="DayNight" src="Image Icons/Day.png" alt="Light/Dark mode">
+        </button>
+    </div>
+    <script>
+        const button = document.querySelector('.theme-bttn');
+        button.addEventListener('click', function() {
+            this.classList.add('clicked');
+            setTimeout(() => {
+            this.classList.remove('clicked');
+        }, 400); 
+    });
+    </script>
+    <div class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="home-info pads">
+                    <h3 class="hello">Hello my name is <span class="name">Ric Michael Estremadura</span></h3>
+                    <div class="wrapper">
+                        <div class="static-txt"><h3>I'm a</h3></div>
+                            <ul class="dynamic-txt">
+                                <li><span><h3>Web Developer</h3></span></li>
+                                <li><span><h3>Computer Science Student</h3></span></li>
+                                <li><span><h3>Web Designer</h3></span></li>
+                                <li><span><h3>Software Developer</h3></span></li>
+                            </ul>
+                    </div>
+                    <p>I am a dedicated computer science student with hands-on experience in building websites and 
+                    creating applications. I am currently seeking opportunities to apply my technical expertise, 
+                    collaborate with others, and gain valuable experience. </p>
+                    <div class="access-buttons">
+                        <a href="Contact.html">
+                            <button type="button" class="button-hire">HIRE ME</button>
+                        </a>
+                        <div class="social-icons">
+                            <a href="https://github.com/RicRicRicRicRicRic" target="_blank" rel="noopener noreferrer">
+                                <img src="Image Icons/Github.png" alt="Link to Github">
+                            </a>
+                            <a href="https://www.facebook.com/rm.estremadura" target="_blank" rel="noopener noreferrer">
+                                <img src="Image Icons/Facebook.png" alt="Link to Facebook">
+                            </a>
+                            <a href="https://www.instagram.com/ricmichaelestremadura/" target="_blank" rel="noopener noreferrer">
+                                <img src="Image Icons/Instagram.png" alt="Link to Instagram">
+                            </a>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="home-img pads">
+                    <img src="Image Icons/Profile.png" alt="Profile Picture of Ric Michael Estremadura">
+                </div>                
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

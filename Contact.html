@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type='text/css' href='navigationStyle.css'>
+    <link rel='stylesheet' type='text/css' href='ContactStyle.css'>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <title>Contact Page</title>
+</head>
+<body>
+    <script src="Mode.js"></script>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="nav-logo">
+                <img src="Image Icons/ArrowRotate.png" class="nav-logo-icon" alt="Website Logo">
+            </li>
+            <!-- Navigation Selection -->
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <img src="Image Icons/Home.png" class="nav-icon" alt="Home Page Icon">
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="About.html" class="nav-link">
+                    <img src="Image Icons/About.png" class="nav-icon" alt="About Page Icon">
+                    <span class="link-text">About</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Projects.html" class="nav-link">
+                    <img src="Image Icons/Projects.png" class="nav-icon" alt="Projects Page Icon">
+                    <span class="link-text">Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="Contact.html" class="nav-link">
+                    <img src="Image Icons/Contact.png" class="nav-icon" alt="Contact Page Icon">
+                    <span class="link-text">Contact</span>
+                </a>
+            </li>
+            <!-- Navigation Selection -->
+        </ul>
+    </nav>
+
+    <div class="contact-cection">
+        <div class="container">
+            <div class="contact-title">
+                <h1>Get in Touch with Me</h1>
+            </div>
+            <div class="row">
+                <div class="contact-content">   
+                    <div class="contact-box">
+                        <div class="info-left">
+                            <div class="info-title">
+                                <h2>More Contact Info</h2>
+                            </div>
+                            <div class="info-icons">
+                                <div class="info-align">
+                                    <div class="info-phone">
+                                        <img src="Image Icons/Phone.png" alt="Phone icon">
+                                        <div class="text-container">
+                                            <h4>Phone Number:</h4>
+                                            <p>+09152588723</p>                
+                                        </div>
+                                    </div>
+                                    <div class="info-email">
+                                        <img src="Image Icons/Mail.png" alt="Email icon">
+                                        <div class="text-container">
+                                            <h4>Email address:</h4>
+                                            <p>ricmichaele@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-location">
+                                        <img src="Image Icons/Location.png" alt="Location icon">
+                                        <div class="text-container">
+                                            <h4>Location:</h4>
+                                            <p>Las Piñas City, Philippines</p>
+                                        </div>
+                                    </div>
+                                    <div class="social-icons">
+                                        <a href="https://github.com/RicRicRicRicRicRic" target="_blank" rel="noopener noreferrer">
+                                            <img src="Image Icons/Github.png" alt="Link to Github">
+                                        </a>
+                                        <a href="https://www.facebook.com/rm.estremadura" target="_blank" rel="noopener noreferrer">
+                                            <img src="Image Icons/Facebook.png" alt="Link to Facebook">
+                                        </a>
+                                        <a href="https://www.instagram.com/ricmichaelestremadura/" target="_blank" rel="noopener noreferrer">
+                                            <img src="Image Icons/Instagram.png" alt="Link to Instagram">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                        <div class="form-right">
+                            <form class="contact_form" action="#" onsubmit="sendMSG(event)">
+                                <div class="form-title">
+                                    <h2>Send me an email!</h2>
+                                </div>
+                                <input type="text" class="field-name" placeholder="Your Name" name="name" id="name-content" required>
+                                <input type="email" class="field-email" placeholder="Your Email" name="email" id="email-content" required>
+                                <input type="text" class="field-subject" placeholder="Subject" name="subject" id="subject-content" required>
+                                <textarea class="field-msg" placeholder="Enter your Message" name="message" id="msg-content" required></textarea>
+                                <div class="send-button">
+                                    <button type="submit">
+                                        <h2>Send Message</h2>
+                                        <img src="Image Icons/PaperPlane.png" alt="Email-icon">
+                                    </button>
+                                </div>
+                            </form>
+                            <script src="https://smtpjs.com/v3/smtp.js">
+                            </script>
+                            <script>
+                                function sendMSG(e) {
+                                    e.preventDefault(); 
+                        
+                                    Email.send({
+                                    Host: "smtp.elasticemail.com",
+                                    Username: "ricmichaele@gmail.com",
+                                    Password: "2FD4176E57E2E27F16BE409FE35E8EF41405", 
+                                    To: 'ricmichaele@gmail.com',
+                                    From: 'wpemailsender823@gmail.com',
+                                    Subject: document.getElementById('subject-content').value,
+                                    Body: 
+                                        "Name: " + document.getElementById('name-content').value + "<br>" +
+                                        "Email: " + document.getElementById('email-content').value + "<br>" + "<br>" +
+                                        "Message: " + document.getElementById('msg-content').value
+                                }).then(
+                                    message => {
+                  
+                                        alert("Message sent successfully!"); 
+                                    },
+                                    error => {
+               
+                                        alert("Error sending message: " + error); 
+                                    }
+                                );
+
+                                }
+                            </script>
+                        </div>
+                        
+
+                    </div>  
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+<script>
+    const button = document.querySelector('.send-button button');
+    button.addEventListener('click', function() {
+        this.classList.add('clicked');
+        setTimeout(() => {
+        this.classList.remove('clicked');
+    }, 400); 
+});
+</script>
+
+
+
+</body>
+</html>
